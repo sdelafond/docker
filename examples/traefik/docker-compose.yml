@@ -53,7 +53,7 @@ services:
       - "SMTP_SERVER=${SMTP_SERVER}"
       - "SMTP_USERNAME=${SMTP_USERNAME}"
       - "SMTP_PASSWORD=${SMTP_PASSWORD}"
-    restart: always
+    # restart: always
 
   librenms:
     image: librenms/librenms:latest
@@ -64,7 +64,7 @@ services:
       - db
       - memcached
       - rrdcached
-      - smtp
+      # - smtp
     volumes:
       - "./librenms:/data"
     labels:
